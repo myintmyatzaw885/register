@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray-color: #ddd;
+    --first-black-color: rgba(0, 0, 0, 0.4);
+    --second-black-color: rgba(0, 0, 0, 0.5);
+    --orange-color: #f0932b;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 100vh;
+    padding: 40rem 0;
+    background: linear-gradient(var(--first-black-color), var(--first-black-color)), url(./image/register-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+html {
+    font-size: 60%;
+}
+
+.register-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--second-black-color);
+    padding: 2rem 4rem;
+    backdrop-filter: blur(1rem);
+}
+
+.register-container header {
+    font-size: 3rem;
+    color: var(--gray-color);
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 800;
+}
+
+.register-container h5 {
+    color: var(--gray-color);
+    text-align: center;
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.register-container form {
+    display: flex;
+    flex-flow: column;
+}
+
+.register-container form small {
+    font-size: 1.2rem;
+    padding-top: .4rem;
+    color: rgb(255, 0, 0, 0.6);
+    /* display: none; */
+}
+
+.register-container form .input-form,
+.register-container form .password-form,
+.register-container form .confirm-password-form {
+    width: 40rem;
+    height: 4rem;
+    background: none;
+    margin-top: 2rem;
+    border-bottom: .1rem solid var(--gray-color);
+    display: flex;
+    align-items: center;
+}
+
+.register-container form .fa-solid {
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.9rem;
+    color: var(--gray-color);
+}
+
+.register-container form input::placeholder {
+    font-size: 1.4rem;
+    color: var(--gray-color);
+}
+
+.register-container form .input-form input {
+    width: 90%;
+    height: 100%;
+    line-height: 4rem;
+    background: none;
+    color: var(--gray-color);
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.register-container form .password-form input,
+.register-container form .confirm-password-form input {
+    width: 80%;
+    height: 100%;
+    line-height: 4rem;
+    background: none;
+    color: var(--gray-color);
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.register-container form .password-form .fa-solid,
+.register-container form .confirm-password-form .fa-solid {
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.register-container form .password-form .fa-eye-slash,
+.register-container form .confirm-password-form .fa-eye-slash {
+    display: none;
+}
+
+.register-container form input[type="submit"] {
+    width: 30rem;
+    height: 4rem;
+    background: var(--orange-color);
+    font-size: 1.5rem;
+    color: var(--gray-color);
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .1s ease;
+    margin: 3rem 5rem 0 5rem;
+}
+
+.register-container form input[type="submit"]:hover {
+    background: var(--second-black-color);
+    color: var(--orange-color);
+    border: .1rem solid var(--orange-color);
+}
+
+.register-container article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-color);
+    padding-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.register-container article a {
+    padding-left: .4rem;
+    text-transform: capitalize;
+    color: var(--orange-color);
+}
+
+
+/* media query start  */
+
+@media(max-width:600px) {
+    .register-container {
+        padding: 2rem;
+    }
+    .register-container header {
+        font-size: 2.8rem;
+    }
+    .register-container h5 {
+        font-size: 1.5rem;
+        padding-top: .5rem;
+    }
+    .register-container form .input-form,
+    .register-container form .password-form,
+    .register-container form .confirm-password-form {
+        width: 30rem;
+        height: 3.5rem;
+        margin-top: 2rem;
+    }
+    .register-container form input[type="submit"] {
+        width: 20rem;
+        height: 3.5rem;
+        font-size: 1.3rem;
+        margin: 2rem 5rem 0 5rem;
+    }
+    .register-container form .fa-solid {
+        line-height: 3.5rem;
+        font-size: 1.7rem;
+    }
+    .register-container form input::placeholder {
+        font-size: 1.2rem;
+    }
+    .register-container form .input-form input {
+        line-height: 3.5rem;
+    }
+    .register-container form .password-form input,
+    .register-container form .confirm-password-form input {
+        line-height: 3.5rem;
+    }
+    .register-container article {
+        padding-top: 1.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width:348px) {
+    .register-container {
+        padding: 1.5rem;
+    }
+    .register-container header {
+        font-size: 2.5rem;
+    }
+    .register-container h5 {
+        font-size: 1.3rem;
+        padding-top: .5rem;
+    }
+    .register-container form .input-form,
+    .register-container form .password-form,
+    .register-container form .confirm-password-form {
+        width: 25rem;
+        height: 3.5rem;
+        margin-top: 2rem;
+    }
+    .register-container form input[type="submit"] {
+        width: 15rem;
+        height: 3.5rem;
+        font-size: 1.3rem;
+        margin: 2rem 5rem 0 5rem;
+    }
+}
+
+
+/* media query end  */
