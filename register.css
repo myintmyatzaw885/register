@@ -16,7 +16,7 @@ body {
     font-family: 'Lato', sans-serif;
     width: 100%;
     height: 100vh;
-    padding: 40rem 0;
+    padding: 20rem 0;
     background: linear-gradient(var(--first-black-color), var(--first-black-color)), url(./image/register-background.jpg);
     background-repeat: no-repeat;
     background-position: center;
